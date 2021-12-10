@@ -1,5 +1,6 @@
 # 明天吃什么
 
+this is a flutter project
 
 
 ## 资源
