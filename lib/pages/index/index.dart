@@ -11,7 +11,7 @@ class ListPage extends StatefulWidget {
 class _ListPageState extends State<ListPage> {
   int _selectedIndex = 1;
   String _pageShow = 'home';
-  String _title = '明天吃什么';
+  String _title = '首页';
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ class _ListPageState extends State<ListPage> {
   void _onHome() {
     setState(() {
       _pageShow = 'home';
-      _title = '明天吃什么';
+      _title = '首页';
     });
   }
 

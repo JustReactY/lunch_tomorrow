@@ -35,23 +35,25 @@ class MyDrawer extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(
-              child: ListView(
-                children: <Widget>[
-                  ListTile(
-                    leading: const Icon(Icons.grade),
-                    title: const Text('收藏'),
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.touch_app),
-                    title: const Text('点赞'),
-                  ),
-                ],
-              ),
-            ),
+            Expanded(child: _buildFloor()),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildFloor() {
+    return ListView(
+      children: <Widget>[
+        ListTile(
+          leading: const Icon(Icons.grade),
+          title: const Text('收藏'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.touch_app),
+          title: const Text('点赞'),
+        ),
+      ],
     );
   }
 }
