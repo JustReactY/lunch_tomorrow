@@ -16,7 +16,7 @@ class _ThemeCardState extends State<ThemeCard> {
         children: [
           Image.network(
             "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
-            width: 170.0,
+            width: 150.0,
           ),
           Text(
             widget.title,
