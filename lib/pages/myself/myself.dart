@@ -13,7 +13,7 @@ class _MySelfPageState extends State<MySelfPage> {
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> list = [
       {"title": "我的收藏", "onPressed": _onPressed, "path": 'collect'},
-      {"title": "我的点赞", "onPressed": _onPressed, "path": 'path'},
+      {"title": "关于", "onPressed": _onPressed, "path": 'about'},
     ];
 
     List<Widget> doms = list

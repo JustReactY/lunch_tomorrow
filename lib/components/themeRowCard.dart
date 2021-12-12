@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ThemeRowCard extends StatefulWidget {
-  const ThemeRowCard({Key? key, required this.title}) : super(key: key);
+  const ThemeRowCard({Key? key, required this.title, required this.species})
+      : super(key: key);
 
   final String title;
+  final String species;
   @override
   _ThemeRowCardState createState() => _ThemeRowCardState();
 }
@@ -13,6 +15,7 @@ class _ThemeRowCardState extends State<ThemeRowCard> {
   bool _switchSelected = false;
   Widget build(BuildContext context) {
     return Container(
+      height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -23,14 +26,19 @@ class _ThemeRowCardState extends State<ThemeRowCard> {
                 width: 100.0,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 12),
+                padding: EdgeInsets.all(12),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(widget.title),
-                    Text(widget.title),
-                    Text(widget.title)
+                    Text(
+                      widget.title,
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Text(
+                      widget.species,
+                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                    ),
                   ],
                 ),
               ),

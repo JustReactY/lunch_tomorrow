@@ -25,7 +25,7 @@ class _ListPageState extends State<ListPage> {
         ],
       ),
       body: _buildWidgetBody(),
-      drawer: MyDrawer(), //抽屉
+      // drawer: MyDrawer(), //抽屉
       bottomNavigationBar: BottomAppBar(
         color: Colors.white,
         shape: CircularNotchedRectangle(), // 底部导航栏打一个圆形的洞

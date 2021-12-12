@@ -14,14 +14,17 @@ class _HomePageState extends State<HomePage> {
     List viewData = [
       {
         "title": "辣椒炒肉",
+        "species": "荤菜",
         "headImg": "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"
       },
       {
         "title": "杏鲍菇",
+        "species": "素材",
         "headImg": "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"
       },
       {
         "title": "鸡蛋 ",
+        "species": "主食",
         "headImg": "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"
       },
     ];
@@ -40,7 +43,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisCount: 2,
         mainAxisSpacing: 10,
         crossAxisSpacing: 5,
-        childAspectRatio: 1.5,
+        // childAspectRatio: 1.5,
       );
     }
 
@@ -67,7 +70,9 @@ class _HomePageState extends State<HomePage> {
                 delegate: SliverChildListDelegate(<Widget>[
               ElevatedButton(
                 child: Text("马上去选"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('choose');
+                },
               ),
             ])),
           ),

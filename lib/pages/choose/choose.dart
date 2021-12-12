@@ -14,14 +14,17 @@ class _ChoosePageState extends State<ChoosePage> {
     List viewData = [
       {
         "title": "辣椒炒肉",
+        "species": "荤菜",
         "headImg": "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"
       },
       {
         "title": "杏鲍菇",
+        "species": "素材",
         "headImg": "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"
       },
       {
         "title": "鸡蛋 ",
+        "species": "主食",
         "headImg": "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"
       },
     ];
@@ -43,7 +46,9 @@ class _ChoosePageState extends State<ChoosePage> {
                     ),
                     // color: Colors.white,
                   ),
-                  child: ThemeRowCard(title: viewData[index]['title']));
+                  child: ThemeRowCard(
+                      title: viewData[index]['title'],
+                      species: viewData[index]['species']));
             }),
       ),
     );
