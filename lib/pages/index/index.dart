@@ -63,7 +63,10 @@ class _ListPageState extends State<ListPage> {
     );
   }
 
-  void _onAdd() {}
+  void _onAdd() {
+    Navigator.of(context).pushNamed('choose');
+  }
+
   void _onHome() {
     setState(() {
       _pageShow = 'home';
