@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './components/drawer.dart';
 import './components/home.dart';
 import 'package:lunch_tomorrow/pages/myself/myself.dart';
+import 'package:lunch_tomorrow/api/api.dart';
 
 class ListPage extends StatefulWidget {
   @override
@@ -12,6 +13,22 @@ class _ListPageState extends State<ListPage> {
   int _selectedIndex = 1;
   String _pageShow = 'home';
   String _title = '首页';
+
+  @override
+  void initState() {
+    super.initState();
+    checkLogin();
+
+    // HttpRequest.request("/login",
+    //     params: {"username": "YYY", 'password': '000000'}).then((res) {
+    //   print(res);
+    // });
+  }
+
+  Future checkLogin() async {
+    var res = await API.login({"username": "YYY", 'password': '000000'});
+    print(res);
+  }
 
   @override
   Widget build(BuildContext context) {
